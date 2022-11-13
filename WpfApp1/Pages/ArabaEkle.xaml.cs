@@ -21,6 +21,7 @@ namespace WpfApp1.Pages
     public partial class ArabaEkle : Page
     {
         Araba Araba;
+        Kasko Kasko;
         public ArabaEkle()
         {
             InitializeComponent();
@@ -28,7 +29,6 @@ namespace WpfApp1.Pages
             LbBoya.MouseLeave += (s, e) => LbBoya.Height = 20;
             LbDegisen.MouseEnter += (s, e) => LbDegisen.Height = 100;
             LbDegisen.MouseLeave += (s, e) => LbDegisen.Height = 20;
-
             CbMarka.ItemsSource = new string[] 
             {
                 "Alfa Romeo",
@@ -118,6 +118,8 @@ namespace WpfApp1.Pages
             BtnGözat.Click += BtnGözat_Click;
             BtnTemizle.Click += BtnTemizle_Click;
             BtnKaydet.Click += BtnKaydet_Click;
+            RbKasko.Checked += (s, e) => SpKaskoBilgileri.Visibility = Visibility.Visible;
+            RbElden.Checked += (s, e) => SpKaskoBilgileri.Visibility = Visibility.Collapsed;
         }
 
         private void BtnKaydet_Click(object sender, RoutedEventArgs e)
@@ -125,14 +127,33 @@ namespace WpfApp1.Pages
             int.TryParse(TxYıl.Text, out int yil);
             if (Araba == null)
             {
+                Kasko = new Kasko()
+                {
+                    Sigorta_Sirketi = TxSigortaSirketi.Text,
+                    Dosya_No = TxDosyaNumarasi.Text,
+                    Police_No = TxPoliceNumarasi.Text,
+                    Arac_Sahibi = TxAracSahibi.Text,
+                    Telefon_No = TxTelefonNo.Text,
+                    Plaka = TxPlaka.Text,
+                    Tc_No = TxTcNo.Text,
+                    Belge_Seri_No = TxBelgeSeriNo.Text,
+                    Kaza_Tarihi = DpKazaTarihi.SelectedDate.Value,
+                    Kaza_Adresi = TxKazaAdresi.Text,
+                    Vuran_Surucu = TxVuranSurucu.Text,
+                    Vuran_Tc = TxVuranTcNo.Text,
+                    Vuran_Telefon_No = TxVuranTelefonNo.Text,
+                    Eksper_Adi = TxEksperAdi.Text,
+                    Eksper_Telefon_No = TxTelefonNo.Text,
+                };
                 Araba = new Araba()
                 {
-         Marka = CbMarka.SelectedItem.ToString(),
+                    Marka = CbMarka.SelectedItem.ToString(),
                     Model = TxModel.Text,
                     Yil = yil,
                     Resim = (BitmapImage)ImgAraba.Source,
+                    Kasko = Kasko
                 };
-
+                TxSigortaSirketi.Text = Kasko.Sigorta_Sirketi;
                 if (CbTavanBoya.IsChecked == true) Araba.Boyanan_Parcalar.Add("Tavan");
                 if (CbKaputBoya.IsChecked == true) Araba.Boyanan_Parcalar.Add("Kaput");
                 if (CbOnTamponBoya.IsChecked == true) Araba.Boyanan_Parcalar.Add("Ön Tampon");
@@ -161,8 +182,9 @@ namespace WpfApp1.Pages
                 if (CbSagArkaKapiDegisen.IsChecked == true) Araba.Değişen_Parcalar.Add("Sağ Arka Kapı");
                 if (CbSagArkaCamurlukDegisen.IsChecked == true) Araba.Değişen_Parcalar.Add("Sağ Arka Çamurluk");
 
-                if (CbKasko.IsChecked == true)
+                if (RbKasko.IsChecked == true)
                     Araba.Kaskodan_Mi_Yapildi = true;
+
                 else
                     Araba.Elden_Mi_Yapildi = false;
 

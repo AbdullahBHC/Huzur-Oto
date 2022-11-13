@@ -22,7 +22,7 @@
         <!--s-->
 
         <Style x:Key="AnaStackPanelStyle" TargetType="StackPanel">
-            <Setter Property="Margin" Value="20"/>
+            <Setter Property="Margin" Value="20,50,20,0"/>
             <Setter Property="VerticalAlignment" Value="Top"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
         </Style>
@@ -68,7 +68,7 @@
             <Setter Property="FontWeight" Value="Bold"/>
             <Setter Property="FontStyle" Value="Italic"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
-            <Setter Property="Margin" Value="0,0,0,15"/>
+            <Setter Property="Margin" Value="5"/>
         </Style>
 
         <Style TargetType="Separator" x:Key="FirstSeparator">

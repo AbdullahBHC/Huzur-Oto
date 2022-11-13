@@ -15,6 +15,26 @@ namespace WpfApp1.Datas
 
         static Veriler()
         {
+
+            Kaskolar.Add(new Kasko()
+            {
+                Sigorta_Sirketi = "Allianz Sigorta",
+                Dosya_No = "0123456789",
+                Police_No = "0123456789",
+                Arac_Sahibi = "Mehmet Bahçeci",
+                Telefon_No = "0532 740 26 27",
+                Plaka = "34 ANA 530",
+                Tc_No = "012345678912",
+                Belge_Seri_No = "0123456789",
+                Kaza_Tarihi = new DateTime(2022, 01, 01),
+                Kaza_Adresi = "Kağıthane / İstanbul",
+                Vuran_Surucu = "Adile Bahçeci",
+                Vuran_Tc = "21987654321",
+                Vuran_Telefon_No = "0507 082 98 08",
+                Eksper_Adi = "Abdullah Bahçeci",
+                Eksper_Telefon_No = "0507 045 56 53",
+            });
+
             Arabalar.Add(new Araba()
             {
                 Marka = "Bmw",
@@ -24,7 +44,8 @@ namespace WpfApp1.Datas
                 Toplam_Tutar = 5000,
                 Resim = new BitmapImage(new Uri("/Images/bmw520.png", UriKind.Relative)),
                 Kaskodan_Mi_Yapildi=false,
-                Elden_Mi_Yapildi=true
+                Elden_Mi_Yapildi=true,
+                Kasko=null
             });
 
             Arabalar.Add(new Araba()
@@ -37,28 +58,11 @@ namespace WpfApp1.Datas
                 Toplam_Tutar = 5000,
                 Resim = new BitmapImage(new Uri("/Images/peugeot301.png", UriKind.Relative)),
                 Kaskodan_Mi_Yapildi = true,
-                Elden_Mi_Yapildi = false
+                Elden_Mi_Yapildi = false,
+                Kasko = Kaskolar[0]
             });
 
-            Kaskolar.Add(new Kasko()
-            {
-                Sigorta_Sirketi = "Allianz Sigorta",
-                Dosya_No = "0123456789",
-                Police_No = "0123456789",
-                Arac_Sahibi = "Mehmet Bahçeci",
-                Telefon_No = "0532 740 26 27",
-                Plaka = "34 ANA 530",
-                Tc_No = "012345678912",
-                Belge_Seri_No = "0123456789",
-                Kaza_Tarihi = new DateTime(2022,01,01),
-                Kaza_Adresi="Kağıthane / İstanbul",
-                Vuran_Surucu="Adile Bahçeci",
-                Vuran_Tc="21987654321",
-                Vuran_Telefon_No="0507 082 98 08",
-                Eksper_Adi =" Abdullah Bahçeci",
-                Eksper_Telefon_No="0507 045 56 53",
-                Araba = Arabalar[1]
-            });
+            
             //Gelir.Add(new Gelir(){ });
             //Gider.Add(new Gider(){ });
         }

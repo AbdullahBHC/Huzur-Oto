@@ -82,9 +82,87 @@
                 <StackPanel Style="{StaticResource StackPanelStyle}">
                     <TextBlock Text="Ne İle Yapıldı : " Style="{StaticResource TextBlockStyle}"/>
                     <StackPanel Orientation="Horizontal" Width="150">
-                        <CheckBox x:Name="CbKasko" Content="Kasko"/>
-                        <CheckBox Content="Elden" Margin="20,0,0,0"/>
+                        <RadioButton x:Name="RbKasko" Content="Kasko"/>
+                        <RadioButton x:Name="RbElden" Content="Elden" Margin="20,0,0,0"/>
                     </StackPanel>
+                </StackPanel>
+
+                <StackPanel x:Name="SpKaskoBilgileri" Style="{StaticResource StackPanelStyle}" Orientation="Vertical" Visibility="Collapsed">
+                    
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock Text="Sigorta Şirketi : " Style="{StaticResource TextBlockStyle}"/>
+                        <TextBox x:Name="TxSigortaSirketi"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock Text="Dosya Numarası : " Style="{StaticResource TextBlockStyle}"/>
+                        <TextBox x:Name="TxDosyaNumarasi"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock Text="Poliçe Numarası : " Style="{StaticResource TextBlockStyle}"/>
+                        <TextBox x:Name="TxPoliceNumarasi"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock Text="Araç Sahibi : " Style="{StaticResource TextBlockStyle}"/>
+                        <TextBox x:Name="TxAracSahibi"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock Text="Telefon Numarası : " Style="{StaticResource TextBlockStyle}"/>
+                        <TextBox x:Name="TxTelefonNo"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock Text="Plaka : " Style="{StaticResource TextBlockStyle}"/>
+                        <TextBox x:Name="TxPlaka"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock Text="Tc Kimlik Numarası : " Style="{StaticResource TextBlockStyle}"/>
+                        <TextBox x:Name="TxTcNo"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock Text="Belge Seri Numarası : " Style="{StaticResource TextBlockStyle}"/>
+                        <TextBox x:Name="TxBelgeSeriNo"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock Text="Kaza Tarihi : " Style="{StaticResource TextBlockStyle}"/>
+                        <DatePicker x:Name="DpKazaTarihi"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock Text="Kaza Adresi : " Style="{StaticResource TextBlockStyle}"/>
+                        <TextBox x:Name="TxKazaAdresi"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock Text="Vuran Sürücü : " Style="{StaticResource TextBlockStyle}"/>
+                        <TextBox x:Name="TxVuranSurucu"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock Text="Vuran Tc Kimlik Numarası : " Style="{StaticResource TextBlockStyle}"/>
+                        <TextBox x:Name="TxVuranTcNo"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock Text="Vuran Telefon Numarası : " Style="{StaticResource TextBlockStyle}"/>
+                        <TextBox x:Name="TxVuranTelefonNo"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock Text="Eksper Adı : " Style="{StaticResource TextBlockStyle}"/>
+                        <TextBox x:Name="TxEksperAdi"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock Text="Eksper Telefon Numarasi : " Style="{StaticResource TextBlockStyle}"/>
+                        <TextBox x:Name="TxEksperTelefonNo"/>
+                    </StackPanel>
+
                 </StackPanel>
 
                 <StackPanel Style="{StaticResource StackPanelStyle}" HorizontalAlignment="Left">

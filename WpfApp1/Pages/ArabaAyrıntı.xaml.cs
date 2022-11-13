@@ -19,6 +19,7 @@ namespace WpfApp1.Pages
     /// </summary>
     public partial class ArabaAyrıntı : Page
     {
+
         public ArabaAyrıntı(Araba araba)
         {
             InitializeComponent();
@@ -56,6 +57,45 @@ namespace WpfApp1.Pages
                 TxYil.Text = araba.Yil.ToString();
                 TxFiyat.Text = araba.Toplam_Tutar.ToString();
                 ImgAraba.Source = araba.Resim;
+                if (araba.Kasko!=null)
+                {
+                    SpKaskoBilgileri.Visibility = Visibility.Visible;
+                    TxSigortaSirketi.Text = araba.Kasko.Sigorta_Sirketi;
+                    TxDosyaNo.Text = araba.Kasko.Dosya_No;
+                    TxPoliceNo.Text = araba.Kasko.Police_No;
+                    TxAracSahibi.Text = araba.Kasko.Arac_Sahibi;
+                    TxTelefonNo.Text = araba.Kasko.Telefon_No;
+                    TxPlaka.Text = araba.Kasko.Plaka;
+                    TxTcNo.Text = araba.Kasko.Tc_No;
+                    TxBelgeSeriNo.Text = araba.Kasko.Belge_Seri_No;
+                    TxKazaTarihi.Text = araba.Kasko.Kaza_Tarihi.ToString();
+                    TxKazaAdresi.Text = araba.Kasko.Kaza_Adresi;
+                    TxVuranSurucu.Text = araba.Kasko.Vuran_Surucu;
+                    TxVuranTcNo.Text = araba.Kasko.Vuran_Tc;
+                    TxVuranTelefonNo.Text = araba.Kasko.Vuran_Telefon_No;
+                    TxEksperAdi.Text = araba.Kasko.Eksper_Adi;
+                    TxEksperTelefonNo.Text = araba.Kasko.Eksper_Telefon_No;
+                }
+                else
+                {
+                    SpKaskoBilgileri.Visibility = Visibility.Collapsed;
+                    TxSigortaSirketi.Text = null;
+                    TxDosyaNo.Text = null;
+                    TxPoliceNo.Text = null;
+                    TxAracSahibi.Text = null;
+                    TxTelefonNo.Text = null;
+                    TxPlaka.Text = null;
+                    TxTcNo.Text = null;
+                    TxBelgeSeriNo.Text = null;
+                    TxKazaTarihi.Text = null;
+                    TxKazaAdresi.Text = null;
+                    TxVuranSurucu.Text = null;
+                    TxVuranTcNo.Text = null;
+                    TxVuranTelefonNo.Text = null;
+                    TxEksperAdi.Text = null;
+                    TxEksperTelefonNo.Text = null;
+
+                }
             }
 
             BtnArabalaraDön.MouseEnter += BtnGalerilereDön_MouseEnter;
@@ -81,5 +121,9 @@ namespace WpfApp1.Pages
             NavigationService.Content = new Arabalar();
         }
 
+        private void StackPanel_Scroll(object sender, System.Windows.Controls.Primitives.ScrollEventArgs e)
+        {
+
+        }
     }
 }

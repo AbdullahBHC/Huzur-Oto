@@ -6,7 +6,6 @@ namespace WpfApp1.Datas
 {
     public class Kasko
     {
-        public Araba Araba { get; set; }
         public string Sigorta_Sirketi { get; set; }
         public string Dosya_No { get; set; }
         public string Police_No { get; set; }
@@ -23,5 +22,8 @@ namespace WpfApp1.Datas
         public string Vuran_Telefon_No { get; set; }
         public string Eksper_Adi { get; set; }
         public string Eksper_Telefon_No { get; set; }
+        public override string ToString() => $"{Sigorta_Sirketi} {Dosya_No} {Police_No} {Arac_Sahibi} {Telefon_No} {Plaka} {Tc_No} {Belge_Seri_No} {Kaza_Tarihi} {Kaza_Adresi} {Vuran_Surucu} {Vuran_Tc} {Vuran_Telefon_No} {Eksper_Adi} {Eksper_Telefon_No}";
+
+
     }
 }
