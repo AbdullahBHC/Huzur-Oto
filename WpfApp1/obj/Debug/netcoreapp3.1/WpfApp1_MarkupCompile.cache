@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 C:\Users\PC\Desktop\Yazilim\Yaptıgım Uygulamalar - C#\HuzurOto\WpfApp1\App.xaml
-6-708962258
+7-1976179623
 
-131408495111
+14866229566
 192-1533232326
-MainWindow.xaml;Pages\ArabaAyrıntı.xaml;Pages\ArabaEkle.xaml;Pages\Arabalar.xaml;Pages\GelirGider.xaml;Pages\KaskoIslemleri.xaml;
+MainWindow.xaml;Pages\ArabaAyrıntı.xaml;Pages\ArabaEkle.xaml;Pages\Arabalar.xaml;Pages\GelirEkle.xaml;Pages\GelirGider.xaml;Pages\GiderEkle.xaml;
 
 False
 

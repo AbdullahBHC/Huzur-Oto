@@ -41,11 +41,7 @@ namespace WpfApp1.Pages
 
         private void BtnArabaEkle_Click(object sender, RoutedEventArgs e)
         {
-            NavigationWindow window = new NavigationWindow();
-            window.Source = new Uri("Pages/ArabaEkle.xaml", UriKind.Relative);
-            window.Show();
-            this.Visibility = Visibility.Hidden;
-
+            NavigationService.Content = new ArabaEkle();
         }
 
         private void MiSil_Click(object sender, RoutedEventArgs e)
@@ -57,6 +53,7 @@ namespace WpfApp1.Pages
                 if (cevap == MessageBoxResult.Yes)
                 {
                     Veriler.Arabalar.Remove(SeçiliAraba);
+                    Veriler.Kaskolar.Remove(SeçiliAraba.Kasko);
                 }
             }
         }

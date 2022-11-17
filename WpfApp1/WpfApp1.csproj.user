@@ -16,10 +16,13 @@
     <Compile Update="Pages\Arabalar.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Pages\GelirEkle.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Pages\GelirGider.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Pages\KaskoIslemleri.xaml.cs">
+    <Compile Update="Pages\GiderEkle.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -36,10 +39,13 @@
     <Page Update="Pages\Arabalar.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Pages\GelirEkle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Pages\GelirGider.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Pages\KaskoIslemleri.xaml">
+    <Page Update="Pages\GiderEkle.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

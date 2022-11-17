@@ -9,147 +9,143 @@
       Title="ArabaAyrıntı">
 
     <Grid Background="White">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="1*"/>
-        </Grid.ColumnDefinitions>
 
         <Button Content="+" x:Name="BtnArabalaraDön" Width="20" Height="20" Margin="10" Visibility="Collapsed" VerticalAlignment="Top" HorizontalAlignment="Left"/>
 
-            <StackPanel Orientation="Vertical" Grid.ColumnSpan="2">
+            <StackPanel Orientation="Vertical">
                 <TextBlock Text="A R A B A   A Y R I N T I L A R" Style="{StaticResource TextBlockSüsStyle}"/>
                 <Separator Style="{StaticResource FirstSeparator}"/>
             </StackPanel>
-        <StackPanel Style="{StaticResource AnaStackPanelStyle}"   >
+        <StackPanel Style="{StaticResource AnaStackPanelStyle}"  Orientation="Horizontal">
 
 
-            <Border BorderBrush="Black" BorderThickness="2" x:Name="SpArabaBilgileri" >
-                <StackPanel Style="{StaticResource AnaStackPanelStyle}" ScrollViewer.VerticalScrollBarVisibility="Auto">
+            <Border BorderBrush="Black" BorderThickness="2" x:Name="SpArabaBilgileri" Margin="20">
+                <StackPanel Style="{StaticResource AnaStackPanelStyle}">
                     <StackPanel Style="{StaticResource StackPanelStyle}">
-                        <TextBlock Text="Marka : " FontSize="13" FontWeight="DemiBold" Style="{StaticResource TextBlockStyle}"/>
-                        <TextBlock x:Name="TxMarka" FontSize="15" FontWeight="SemiBold" Style="{StaticResource TextBlockStyle}"/>
+                        <TextBlock Text="Marka : " FontSize="13" FontWeight="SemiBold" Style="{StaticResource TextBlockStyle}"/>
+                        <TextBlock x:Name="TxMarka" FontSize="15" FontWeight="Bold" Style="{StaticResource TextBlockStyle}"/>
                     </StackPanel>
 
                     <StackPanel Style="{StaticResource StackPanelStyle}">
-                        <TextBlock Text="Model : " FontSize="13" FontWeight="DemiBold" Style="{StaticResource TextBlockStyle}"/>
-                        <TextBlock x:Name="TxModel" FontSize="15" FontWeight="SemiBold" Style="{StaticResource TextBlockStyle}"/>
+                        <TextBlock Text="Model : " FontSize="13" FontWeight="SemiBold" Style="{StaticResource TextBlockStyle}"/>
+                        <TextBlock x:Name="TxModel" FontSize="15" FontWeight="Bold" Style="{StaticResource TextBlockStyle}"/>
                     </StackPanel>
 
                     <StackPanel Style="{StaticResource StackPanelStyle}">
-                        <TextBlock Text="Yıl : " FontSize="13" FontWeight="DemiBold" Style="{StaticResource TextBlockStyle}"/>
-                        <TextBlock x:Name="TxYil" FontSize="15" FontWeight="SemiBold" Style="{StaticResource TextBlockStyle}"/>
+                        <TextBlock Text="Yıl : " FontSize="13" FontWeight="SemiBold" Style="{StaticResource TextBlockStyle}"/>
+                        <TextBlock x:Name="TxYil" FontSize="15" FontWeight="Bold" Style="{StaticResource TextBlockStyle}"/>
                     </StackPanel>
 
                     <StackPanel Style="{StaticResource StackPanelStyle}">
-                        <TextBlock Text="Boyanan Parçalar : " FontSize="13" FontWeight="DemiBold" Style="{StaticResource TextBlockStyle}" VerticalAlignment="Top"/>
-                        <ListBox x:Name="LbBoya" FontSize="15" FontWeight="SemiBold" Width="150" Height="Auto"/>
+                        <TextBlock Text="Boyanan Parçalar : " FontSize="13" FontWeight="SemiBold" Style="{StaticResource TextBlockStyle}" VerticalAlignment="Top"/>
+                        <ListBox x:Name="LbBoya" FontSize="15" FontWeight="Bold" Width="150" Height="Auto"/>
                     </StackPanel>
 
                     <StackPanel Style="{StaticResource StackPanelStyle}">
-                        <TextBlock Text="Değişen Parçalar : " FontSize="13" FontWeight="DemiBold" Style="{StaticResource TextBlockStyle}" VerticalAlignment="Top"/>
-                        <ListBox x:Name="LbDegisen" FontSize="15" FontWeight="SemiBold" Width="150" Height="Auto"/>
+                        <TextBlock Text="Değişen Parçalar : " FontSize="13" FontWeight="SemiBold" Style="{StaticResource TextBlockStyle}" VerticalAlignment="Top"/>
+                        <ListBox x:Name="LbDegisen" FontSize="15" FontWeight="Bold" Width="150" Height="Auto"/>
                     </StackPanel>
 
                     <StackPanel Style="{StaticResource StackPanelStyle}">
-                        <TextBlock Text="Toplam Tutar : " FontSize="13" FontWeight="DemiBold" Style="{StaticResource TextBlockStyle}"/>
-                        <TextBlock x:Name="TxFiyat" FontSize="15" FontWeight="SemiBold" Style="{StaticResource TextBlockStyle}"/>
+                        <TextBlock Text="Toplam Tutar : " FontSize="13" FontWeight="SemiBold" Style="{StaticResource TextBlockStyle}"/>
+                        <TextBlock x:Name="TxFiyat" FontSize="15" FontWeight="Bold" Style="{StaticResource TextBlockStyle}"/>
                     </StackPanel>
 
                     <StackPanel Style="{StaticResource StackPanelStyle}">
-                        <TextBlock Text="Ne İle Yapıldı : " FontSize="13" FontWeight="DemiBold" Style="{StaticResource TextBlockStyle}"/>
-                        <TextBlock x:Name="TxYapı" FontSize="15" FontWeight="SemiBold" Style="{StaticResource TextBlockStyle}"/>
+                        <TextBlock Text="Ne İle Yapıldı : " FontSize="13" FontWeight="SemiBold" Style="{StaticResource TextBlockStyle}"/>
+                        <TextBlock x:Name="TxYapı" FontSize="15" FontWeight="Bold" Style="{StaticResource TextBlockStyle}"/>
                     </StackPanel>
 
                     <StackPanel Style="{StaticResource StackPanelStyle}" HorizontalAlignment="Left" Margin="0,10,0,0">
-                        <TextBlock Text="Resim : " FontSize="13" FontWeight="DemiBold" Style="{StaticResource TextBlockStyle}" VerticalAlignment="Top"/>
+                        <TextBlock Text="Resim : " FontSize="13" FontWeight="SemiBold" Style="{StaticResource TextBlockStyle}" VerticalAlignment="Top"/>
                         <Image Width="150" x:Name="ImgAraba"/>
                     </StackPanel>
                 </StackPanel>
             </Border>
+
+            <Border BorderBrush="Black" BorderThickness="2"  x:Name="SpKaskoBilgileri" Margin="20">
+                <StackPanel Style="{StaticResource AnaStackPanelStyle}">
+                    
+                    <StackPanel Style="{StaticResource StackPanelStyle}">
+                        <TextBlock Text="Sigorta Şirketi : " FontSize="13" FontWeight="SemiBold" Style="{StaticResource TextBlockStyle}" Width="200"/>
+                        <TextBlock x:Name="TxSigortaSirketi" FontSize="15" FontWeight="Bold" Style="{StaticResource TextBlockStyle}"/>
+                    </StackPanel>
+
+                    <StackPanel Style="{StaticResource StackPanelStyle}">
+                        <TextBlock Text="Dosya Numarası : " FontSize="13" FontWeight="SemiBold" Style="{StaticResource TextBlockStyle}" Width="200"/>
+                        <TextBlock x:Name="TxDosyaNo" FontSize="15" FontWeight="Bold" Style="{StaticResource TextBlockStyle}"/>
+                    </StackPanel>
+
+                    <StackPanel Style="{StaticResource StackPanelStyle}">
+                        <TextBlock Text="Poliçe Numarası : " FontSize="13" FontWeight="SemiBold" Style="{StaticResource TextBlockStyle}" Width="200"/>
+                        <TextBlock x:Name="TxPoliceNo" FontSize="15" FontWeight="Bold" Style="{StaticResource TextBlockStyle}"/>
+                    </StackPanel>
+
+                    <StackPanel Style="{StaticResource StackPanelStyle}">
+                        <TextBlock Text="Araç Sahibi : " FontSize="13" FontWeight="SemiBold" Style="{StaticResource TextBlockStyle}" Width="200"/>
+                        <TextBlock x:Name="TxAracSahibi" FontSize="15" FontWeight="Bold" Style="{StaticResource TextBlockStyle}"/>
+                    </StackPanel>
+
+                    <StackPanel Style="{StaticResource StackPanelStyle}">
+                        <TextBlock Text="Telefon Numarası : " FontSize="13" FontWeight="SemiBold" Style="{StaticResource TextBlockStyle}" Width="200"/>
+                        <TextBlock x:Name="TxTelefonNo" FontSize="15" FontWeight="Bold" Style="{StaticResource TextBlockStyle}"/>
+                    </StackPanel>
+
+                    <StackPanel Style="{StaticResource StackPanelStyle}">
+                        <TextBlock Text="Plaka : " FontSize="13" FontWeight="SemiBold" Style="{StaticResource TextBlockStyle}" Width="200"/>
+                        <TextBlock x:Name="TxPlaka" FontSize="15" FontWeight="Bold" Style="{StaticResource TextBlockStyle}"/>
+                    </StackPanel>
+
+                    <StackPanel Style="{StaticResource StackPanelStyle}">
+                        <TextBlock Text="Tc Kimlik Numarası : " FontSize="13" FontWeight="SemiBold" Style="{StaticResource TextBlockStyle}" Width="200"/>
+                        <TextBlock x:Name="TxTcNo" FontSize="15" FontWeight="Bold" Style="{StaticResource TextBlockStyle}"/>
+                    </StackPanel>
+
+                    <StackPanel Style="{StaticResource StackPanelStyle}">
+                        <TextBlock Text="Belge Seri Numarası : " FontSize="13" FontWeight="SemiBold" Style="{StaticResource TextBlockStyle}" Width="200"/>
+                        <TextBlock x:Name="TxBelgeSeriNo" FontSize="15" FontWeight="Bold" Style="{StaticResource TextBlockStyle}"/>
+                    </StackPanel>
+
+                    <StackPanel Style="{StaticResource StackPanelStyle}">
+                        <TextBlock Text="Kaza Tarihi : " FontSize="13" FontWeight="SemiBold" Style="{StaticResource TextBlockStyle}" Width="200"/>
+                        <TextBlock x:Name="TxKazaTarihi" FontSize="15" FontWeight="Bold" Style="{StaticResource TextBlockStyle}"/>
+                    </StackPanel>
+
+                    <StackPanel Style="{StaticResource StackPanelStyle}">
+                        <TextBlock Text="Kaza Adresi : " FontSize="13" FontWeight="SemiBold" Style="{StaticResource TextBlockStyle}" Width="200"/>
+                        <TextBlock x:Name="TxKazaAdresi" FontSize="15" FontWeight="Bold" Style="{StaticResource TextBlockStyle}"/>
+                    </StackPanel>
+
+                    <StackPanel Style="{StaticResource StackPanelStyle}">
+                        <TextBlock Text="Vuran Sürücü : " FontSize="13" FontWeight="SemiBold" Style="{StaticResource TextBlockStyle}" Width="200"/>
+                        <TextBlock x:Name="TxVuranSurucu" FontSize="15" FontWeight="Bold" Style="{StaticResource TextBlockStyle}"/>
+                    </StackPanel>
+
+                    <StackPanel Style="{StaticResource StackPanelStyle}">
+                        <TextBlock Text="Vuran Tc Kimlik Numarası : " FontSize="13" FontWeight="SemiBold" Style="{StaticResource TextBlockStyle}" Width="200"/>
+                        <TextBlock x:Name="TxVuranTcNo" FontSize="15" FontWeight="Bold" Style="{StaticResource TextBlockStyle}"/>
+                    </StackPanel>
+
+                    <StackPanel Style="{StaticResource StackPanelStyle}">
+                        <TextBlock Text="Vuran Telefon Numarası : " FontSize="13" FontWeight="SemiBold" Style="{StaticResource TextBlockStyle}" Width="200"/>
+                        <TextBlock x:Name="TxVuranTelefonNo" FontSize="15" FontWeight="Bold" Style="{StaticResource TextBlockStyle}"/>
+                    </StackPanel>
+                    
+                    <StackPanel Style="{StaticResource StackPanelStyle}">
+                        <TextBlock Text="Eksper Adı : " FontSize="13" FontWeight="SemiBold" Style="{StaticResource TextBlockStyle}" Width="200"/>
+                        <TextBlock x:Name="TxEksperAdi" FontSize="15" FontWeight="Bold" Style="{StaticResource TextBlockStyle}"/>
+                    </StackPanel>
+
+                    <StackPanel Style="{StaticResource StackPanelStyle}">
+                        <TextBlock Text="Eksper Telefon Numarası: " FontSize="13" FontWeight="SemiBold" Style="{StaticResource TextBlockStyle}" Width="200"/>
+                        <TextBlock x:Name="TxEksperTelefonNo" FontSize="15" FontWeight="Bold" Style="{StaticResource TextBlockStyle}"/>
+                    </StackPanel>
+                    
+                </StackPanel>
+            </Border>
+            
         </StackPanel>
 
-        <StackPanel x:Name="SpKaskoBilgileri" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="20,50,20,0">
-            <StackPanel Style="{StaticResource StackPanelStyle}">
-                <TextBlock Text="Sigorta Şirketi : " FontSize="13" FontWeight="DemiBold" Style="{StaticResource TextBlockStyle}" Width="200"/>
-                <TextBlock x:Name="TxSigortaSirketi" FontSize="15" FontWeight="SemiBold" Style="{StaticResource TextBlockStyle}"/>
-            </StackPanel>
-
-            <StackPanel Style="{StaticResource StackPanelStyle}">
-                <TextBlock Text="Dosya Numarası : " FontSize="13" FontWeight="DemiBold" Style="{StaticResource TextBlockStyle}" Width="200"/>
-                <TextBlock x:Name="TxDosyaNo" FontSize="15" FontWeight="SemiBold" Style="{StaticResource TextBlockStyle}"/>
-            </StackPanel>
-
-            <StackPanel Style="{StaticResource StackPanelStyle}">
-                <TextBlock Text="Poliçe Numarası : " FontSize="13" FontWeight="DemiBold" Style="{StaticResource TextBlockStyle}" Width="200"/>
-                <TextBlock x:Name="TxPoliceNo" FontSize="15" FontWeight="SemiBold" Style="{StaticResource TextBlockStyle}"/>
-            </StackPanel>
-
-            <StackPanel Style="{StaticResource StackPanelStyle}">
-                <TextBlock Text="Araç Sahibi : " FontSize="13" FontWeight="DemiBold" Style="{StaticResource TextBlockStyle}" Width="200"/>
-                <TextBlock x:Name="TxAracSahibi" FontSize="15" FontWeight="SemiBold" Style="{StaticResource TextBlockStyle}"/>
-            </StackPanel>
-
-            <StackPanel Style="{StaticResource StackPanelStyle}">
-                <TextBlock Text="Telefon Numarası : " FontSize="13" FontWeight="DemiBold" Style="{StaticResource TextBlockStyle}" Width="200"/>
-                <TextBlock x:Name="TxTelefonNo" FontSize="15" FontWeight="SemiBold" Style="{StaticResource TextBlockStyle}"/>
-            </StackPanel>
-
-            <StackPanel Style="{StaticResource StackPanelStyle}">
-                <TextBlock Text="Plaka : " FontSize="13" FontWeight="DemiBold" Style="{StaticResource TextBlockStyle}" Width="200"/>
-                <TextBlock x:Name="TxPlaka" FontSize="15" FontWeight="SemiBold" Style="{StaticResource TextBlockStyle}"/>
-            </StackPanel>
-
-            <StackPanel Style="{StaticResource StackPanelStyle}">
-                <TextBlock Text="Tc Kimlik Numarası : " FontSize="13" FontWeight="DemiBold" Style="{StaticResource TextBlockStyle}" Width="200"/>
-                <TextBlock x:Name="TxTcNo" FontSize="15" FontWeight="SemiBold" Style="{StaticResource TextBlockStyle}"/>
-            </StackPanel>
-
-            <StackPanel Style="{StaticResource StackPanelStyle}">
-                <TextBlock Text="Belge Seri Numarası : " FontSize="13" FontWeight="DemiBold" Style="{StaticResource TextBlockStyle}" Width="200"/>
-                <TextBlock x:Name="TxBelgeSeriNo" FontSize="15" FontWeight="SemiBold" Style="{StaticResource TextBlockStyle}"/>
-            </StackPanel>
-
-            <StackPanel Style="{StaticResource StackPanelStyle}">
-                <TextBlock Text="Kaza Tarihi : " FontSize="13" FontWeight="DemiBold" Style="{StaticResource TextBlockStyle}" Width="200"/>
-                <TextBlock x:Name="TxKazaTarihi" FontSize="15" FontWeight="SemiBold" Style="{StaticResource TextBlockStyle}"/>
-            </StackPanel>
-
-            <StackPanel Style="{StaticResource StackPanelStyle}">
-                <TextBlock Text="Kaza Adresi : " FontSize="13" FontWeight="DemiBold" Style="{StaticResource TextBlockStyle}" Width="200"/>
-                <TextBlock x:Name="TxKazaAdresi" FontSize="15" FontWeight="SemiBold" Style="{StaticResource TextBlockStyle}"/>
-            </StackPanel>
-
-            <StackPanel Style="{StaticResource StackPanelStyle}">
-                <TextBlock Text="Vuran Sürücü : " FontSize="13" FontWeight="DemiBold" Style="{StaticResource TextBlockStyle}" Width="200"/>
-                <TextBlock x:Name="TxVuranSurucu" FontSize="15" FontWeight="SemiBold" Style="{StaticResource TextBlockStyle}"/>
-            </StackPanel>
-
-
-            <StackPanel Style="{StaticResource StackPanelStyle}">
-                <TextBlock Text="Vuran Tc Kimlik Numarası : " FontSize="13" FontWeight="DemiBold" Style="{StaticResource TextBlockStyle}" Width="200"/>
-                <TextBlock x:Name="TxVuranTcNo" FontSize="15" FontWeight="SemiBold" Style="{StaticResource TextBlockStyle}"/>
-            </StackPanel>
-
-            <StackPanel Style="{StaticResource StackPanelStyle}">
-                <TextBlock Text="Vuran Telefon Numarası : " FontSize="13" FontWeight="DemiBold" Style="{StaticResource TextBlockStyle}" Width="200"/>
-                <TextBlock x:Name="TxVuranTelefonNo" FontSize="15" FontWeight="SemiBold" Style="{StaticResource TextBlockStyle}"/>
-            </StackPanel>
-
-
-
-            <StackPanel Style="{StaticResource StackPanelStyle}">
-                <TextBlock Text="Eksper Adı : " FontSize="13" FontWeight="DemiBold" Style="{StaticResource TextBlockStyle}" Width="200"/>
-                <TextBlock x:Name="TxEksperAdi" FontSize="15" FontWeight="SemiBold" Style="{StaticResource TextBlockStyle}"/>
-            </StackPanel>
-
-            <StackPanel Style="{StaticResource StackPanelStyle}">
-                <TextBlock Text="Eksper Telefon Numarası: " FontSize="13" FontWeight="DemiBold" Style="{StaticResource TextBlockStyle}" Width="200"/>
-                <TextBlock x:Name="TxEksperTelefonNo" FontSize="15" FontWeight="SemiBold" Style="{StaticResource TextBlockStyle}"/>
-            </StackPanel>
-
-
-
-        </StackPanel>
 
     </Grid>
 </Page>

@@ -24,22 +24,10 @@ namespace WpfApp1.Pages
         {
             InitializeComponent();
             BtnGeri.Click += BtnGeri_Click;
-            LbArabalar.ItemsSource = Veriler.Arabalar;
-            MiSil.Click += MiSil_Click;
-        }
-
-        private void MiSil_Click(object sender, RoutedEventArgs e)
-        {
-            Araba SeçiliAraba = (Araba)LbArabalar.SelectedItem;
-            if (SeçiliAraba != null)
-            {
-                var cevap = MessageBox.Show("Seçili Araba Silinsin Mi ?", "Araba Silme İşlemi", MessageBoxButton.YesNo, MessageBoxImage.Warning);
-                if (cevap == MessageBoxResult.Yes)
-                {
-                    Veriler.Arabalar.Remove(SeçiliAraba);
-                }
-            }
-
+            BtnGelirEkle.Click +=(s,e)=> NavigationService.Content = new ArabaEkle();
+            BtnGiderEkle.Click +=(s,e)=> NavigationService.Content = new GiderEkle();
+            LbGelirler.ItemsSource = Veriler.Arabalar;
+            LbGiderler.ItemsSource = Veriler.Gider;
         }
 
         private void BtnGeri_Click(object sender, RoutedEventArgs e)

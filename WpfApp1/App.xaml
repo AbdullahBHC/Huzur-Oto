@@ -16,13 +16,24 @@
             <Setter Property="TextAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
         </Style>
-        
-        
-        
+
+        <Style x:Key="KaskoText" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Width" Value="120"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+        </Style>
+
+        <Style x:Key="KaskoText2" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Width" Value="auto"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+
+
         <!--s-->
 
         <Style x:Key="AnaStackPanelStyle" TargetType="StackPanel">
-            <Setter Property="Margin" Value="20,50,20,0"/>
+            <Setter Property="Margin" Value="20,50"/>
             <Setter Property="VerticalAlignment" Value="Top"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
         </Style>

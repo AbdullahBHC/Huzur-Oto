@@ -9,177 +9,182 @@
       Title="ArabaEkle">
 
     <Grid Background="White">
+
         <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
-            <StackPanel Style="{StaticResource AnaStackPanelStyle}">
+            <StackPanel>
+                <Button Content="Geri" x:Name="BtnGeri" Width="40" Height="25" Margin="10,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <StackPanel Style="{StaticResource AnaStackPanelStyle}">
 
-                <StackPanel Orientation="Vertical">
-                    <TextBlock Text="A R A B A   K A Y I T" Style="{StaticResource TextBlockSüsStyle}"/>
-                    <Separator Style="{StaticResource FirstSeparator}"/>
-                </StackPanel>
-
-
-                <StackPanel Style="{StaticResource StackPanelStyle}">
-                    <TextBlock Text="Marka : " Style="{StaticResource TextBlockStyle}"/>
-                    <ComboBox x:Name="CbMarka"/>
-                </StackPanel>
-
-
-                <StackPanel Style="{StaticResource StackPanelStyle}">
-                    <TextBlock Text="Model : " Style="{StaticResource TextBlockStyle}"/>
-                    <TextBox x:Name="TxModel"/>
-                </StackPanel>
-
-                <StackPanel Style="{StaticResource StackPanelStyle}">
-                    <TextBlock Text="Yıl : " Style="{StaticResource TextBlockStyle}"/>
-                    <TextBox x:Name="TxYıl"/>
-                </StackPanel>
-
-                <StackPanel Style="{StaticResource StackPanelStyle}">
-                    <TextBlock Text="Boyanan Parçalar" Style="{StaticResource TextBlockStyle}" VerticalAlignment="Top"/>
-                    <ListBox x:Name="LbBoya" Width="150" Height="20" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
-                        <CheckBox x:Name="CbTavanBoya" Width="150" Content="Tavan"/>
-                        <CheckBox x:Name="CbKaputBoya" Width="150" Content="Kaput"/>
-                        <CheckBox x:Name="CbOnTamponBoya" Width="150" Content="Ön Tampon"/>
-                        <CheckBox x:Name="CbSolOnCamurlukBoya" Width="150" Content="Sol Ön Çamurluk"/>
-                        <CheckBox x:Name="CbSolOnKapiBoya" Width="150" Content="Sol Ön Kapı"/>
-                        <CheckBox x:Name="CbSolArkaKapiBoya" Width="150" Content="Sol Arka Kapı"/>
-                        <CheckBox x:Name="CbSolArkaCamurlukBoya" Width="150" Content="Sol Arka Çamurlık"/>
-                        <CheckBox x:Name="CbBagajBoya" Width="150" Content="Bagaj"/>
-                        <CheckBox x:Name="CbArkaTamponBoya" Width="150" Content="Arka Tampon"/>
-                        <CheckBox x:Name="CbSagOnCamurlukBoya" Width="150" Content="Sağ Ön Çamurluk"/>
-                        <CheckBox x:Name="CbSagOnKapiBoya" Width="150" Content="Sağ Ön Kapı"/>
-                        <CheckBox x:Name="CbSagArkaKapiBoya" Width="150" Content="Sağ Arka Kapı"/>
-                        <CheckBox x:Name="CbSagArkaCamurlukBoya" Width="150" Content="Sağ Arka Çamurlık"/>
-
-                    </ListBox>
-                </StackPanel>
-
-                <StackPanel Style="{StaticResource StackPanelStyle}">
-                    <TextBlock Text="Değişen Parçalar" Style="{StaticResource TextBlockStyle}"/>
-                    <ListBox x:Name="LbDegisen" Width="150" Height="20" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
-                        <CheckBox x:Name="CbTavanDegisen" Width="150" Content="Bagaj"/>
-                        <CheckBox x:Name="CbKaputDegisen" Width="150" Content="Kaput"/>
-                        <CheckBox x:Name="CbOnTamponDegisen" Width="150" Content="Ön Tampon"/>
-                        <CheckBox x:Name="CbSolOnCamurlukDegisen" Width="150" Content="Sol Ön Çamurluk"/>
-                        <CheckBox x:Name="CbSolOnKapiDegisen" Width="150" Content="Sol Ön Kapı"/>
-                        <CheckBox x:Name="CbSolArkaKapiDegisen" Width="150" Content="Sol Arka Kapı"/>
-                        <CheckBox x:Name="CbSolArkaCamurlukDegisen" Width="150" Content="Sol Arka Çamurlık"/>
-                        <CheckBox x:Name="CbBagajDegisen" Width="150" Content="Bagaj"/>
-                        <CheckBox x:Name="CbArkaTamponDegisen" Width="150" Content="Arka Tampon"/>
-                        <CheckBox x:Name="CbSagOnCamurlukDegisen" Width="150" Content="Sağ Ön Çamurluk"/>
-                        <CheckBox x:Name="CbSagOnKapiDegisen" Width="150" Content="Sağ Ön Kapı"/>
-                        <CheckBox x:Name="CbSagArkaKapiDegisen" Width="150" Content="Sağ Arka Kapı"/>
-                        <CheckBox x:Name="CbSagArkaCamurlukDegisen" Width="150" Content="Sağ Arka Çamurlık"/>
-
-                    </ListBox>
-                </StackPanel>
-
-                <StackPanel Style="{StaticResource StackPanelStyle}">
-                    <TextBlock Text="Fiyat : " Style="{StaticResource TextBlockStyle}"/>
-                    <TextBox x:Name="TxFiyat"/>
-                </StackPanel>
-
-                <StackPanel Style="{StaticResource StackPanelStyle}">
-                    <TextBlock Text="Ne İle Yapıldı : " Style="{StaticResource TextBlockStyle}"/>
-                    <StackPanel Orientation="Horizontal" Width="150">
-                        <RadioButton x:Name="RbKasko" Content="Kasko"/>
-                        <RadioButton x:Name="RbElden" Content="Elden" Margin="20,0,0,0"/>
-                    </StackPanel>
-                </StackPanel>
-
-                <StackPanel x:Name="SpKaskoBilgileri" Style="{StaticResource StackPanelStyle}" Orientation="Vertical" Visibility="Collapsed">
-                    
-                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                        <TextBlock Text="Sigorta Şirketi : " Style="{StaticResource TextBlockStyle}"/>
-                        <TextBox x:Name="TxSigortaSirketi"/>
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="A R A B A   K A Y I T" Style="{StaticResource TextBlockSüsStyle}"/>
+                        <Separator Style="{StaticResource FirstSeparator}"/>
                     </StackPanel>
 
-                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                        <TextBlock Text="Dosya Numarası : " Style="{StaticResource TextBlockStyle}"/>
-                        <TextBox x:Name="TxDosyaNumarasi"/>
-                    </StackPanel>
-
-                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                        <TextBlock Text="Poliçe Numarası : " Style="{StaticResource TextBlockStyle}"/>
-                        <TextBox x:Name="TxPoliceNumarasi"/>
-                    </StackPanel>
-
-                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                        <TextBlock Text="Araç Sahibi : " Style="{StaticResource TextBlockStyle}"/>
-                        <TextBox x:Name="TxAracSahibi"/>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                        <TextBlock Text="Telefon Numarası : " Style="{StaticResource TextBlockStyle}"/>
-                        <TextBox x:Name="TxTelefonNo"/>
-                    </StackPanel>
-
-                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                        <TextBlock Text="Plaka : " Style="{StaticResource TextBlockStyle}"/>
-                        <TextBox x:Name="TxPlaka"/>
-                    </StackPanel>
-
-                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                        <TextBlock Text="Tc Kimlik Numarası : " Style="{StaticResource TextBlockStyle}"/>
-                        <TextBox x:Name="TxTcNo"/>
-                    </StackPanel>
-
-                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                        <TextBlock Text="Belge Seri Numarası : " Style="{StaticResource TextBlockStyle}"/>
-                        <TextBox x:Name="TxBelgeSeriNo"/>
-                    </StackPanel>
-
-                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                        <TextBlock Text="Kaza Tarihi : " Style="{StaticResource TextBlockStyle}"/>
-                        <DatePicker x:Name="DpKazaTarihi"/>
-                    </StackPanel>
-
-                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                        <TextBlock Text="Kaza Adresi : " Style="{StaticResource TextBlockStyle}"/>
-                        <TextBox x:Name="TxKazaAdresi"/>
-                    </StackPanel>
-
-                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                        <TextBlock Text="Vuran Sürücü : " Style="{StaticResource TextBlockStyle}"/>
-                        <TextBox x:Name="TxVuranSurucu"/>
-                    </StackPanel>
-
-                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                        <TextBlock Text="Vuran Tc Kimlik Numarası : " Style="{StaticResource TextBlockStyle}"/>
-                        <TextBox x:Name="TxVuranTcNo"/>
-                    </StackPanel>
-
-                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                        <TextBlock Text="Vuran Telefon Numarası : " Style="{StaticResource TextBlockStyle}"/>
-                        <TextBox x:Name="TxVuranTelefonNo"/>
-                    </StackPanel>
-
-                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                        <TextBlock Text="Eksper Adı : " Style="{StaticResource TextBlockStyle}"/>
-                        <TextBox x:Name="TxEksperAdi"/>
-                    </StackPanel>
-
-                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                        <TextBlock Text="Eksper Telefon Numarasi : " Style="{StaticResource TextBlockStyle}"/>
-                        <TextBox x:Name="TxEksperTelefonNo"/>
-                    </StackPanel>
-
-                </StackPanel>
-
-                <StackPanel Style="{StaticResource StackPanelStyle}" HorizontalAlignment="Left">
-                    <TextBlock Text="Resim : " Style="{StaticResource TextBlockStyle}"/>
-                    <Button x:Name="BtnGözat" Content="Gözat..." Width="50" HorizontalAlignment="Left" BorderBrush="Black" BorderThickness="1.250"/>
-                </StackPanel>
-
-                <StackPanel x:Name="SpArabaResim" Orientation="Vertical" Visibility="Collapsed">
-                    <Image x:Name="ImgAraba" Visibility="Collapsed"/>
-                </StackPanel>
-
-                <StackPanel Orientation="Vertical" Margin="0,30,0,0">
-                    <Separator Style="{StaticResource LastSeparator}"/>
 
                     <StackPanel Style="{StaticResource StackPanelStyle}">
-                        <Button x:Name="BtnTemizle" Width="50" Style="{StaticResource ClearButton}" Margin="0,0,25,0"/>
-                        <Button x:Name="BtnKaydet" Style="{StaticResource SaveButton}"/>
+                        <TextBlock Text="Marka : " Style="{StaticResource TextBlockStyle}"/>
+                        <ComboBox x:Name="CbMarka"/>
+                    </StackPanel>
+
+
+                    <StackPanel Style="{StaticResource StackPanelStyle}">
+                        <TextBlock Text="Model : " Style="{StaticResource TextBlockStyle}"/>
+                        <TextBox x:Name="TxModel"/>
+                    </StackPanel>
+
+                    <StackPanel Style="{StaticResource StackPanelStyle}">
+                        <TextBlock Text="Yıl : " Style="{StaticResource TextBlockStyle}"/>
+                        <TextBox x:Name="TxYıl"/>
+                    </StackPanel>
+
+                    <StackPanel Style="{StaticResource StackPanelStyle}">
+                        <TextBlock Text="Boyanan Parçalar" Style="{StaticResource TextBlockStyle}" VerticalAlignment="Top"/>
+                        <ListBox x:Name="LbBoya" Width="150" Height="20" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                            <CheckBox x:Name="CbTavanBoya" Width="150" Content="Tavan"/>
+                            <CheckBox x:Name="CbKaputBoya" Width="150" Content="Kaput"/>
+                            <CheckBox x:Name="CbOnTamponBoya" Width="150" Content="Ön Tampon"/>
+                            <CheckBox x:Name="CbSolOnCamurlukBoya" Width="150" Content="Sol Ön Çamurluk"/>
+                            <CheckBox x:Name="CbSolOnKapiBoya" Width="150" Content="Sol Ön Kapı"/>
+                            <CheckBox x:Name="CbSolArkaKapiBoya" Width="150" Content="Sol Arka Kapı"/>
+                            <CheckBox x:Name="CbSolArkaCamurlukBoya" Width="150" Content="Sol Arka Çamurlık"/>
+                            <CheckBox x:Name="CbBagajBoya" Width="150" Content="Bagaj"/>
+                            <CheckBox x:Name="CbArkaTamponBoya" Width="150" Content="Arka Tampon"/>
+                            <CheckBox x:Name="CbSagOnCamurlukBoya" Width="150" Content="Sağ Ön Çamurluk"/>
+                            <CheckBox x:Name="CbSagOnKapiBoya" Width="150" Content="Sağ Ön Kapı"/>
+                            <CheckBox x:Name="CbSagArkaKapiBoya" Width="150" Content="Sağ Arka Kapı"/>
+                            <CheckBox x:Name="CbSagArkaCamurlukBoya" Width="150" Content="Sağ Arka Çamurlık"/>
+
+                        </ListBox>
+                    </StackPanel>
+
+                    <StackPanel Style="{StaticResource StackPanelStyle}">
+                        <TextBlock Text="Değişen Parçalar" Style="{StaticResource TextBlockStyle}"/>
+                        <ListBox x:Name="LbDegisen" Width="150" Height="20" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                            <CheckBox x:Name="CbTavanDegisen" Width="150" Content="Bagaj"/>
+                            <CheckBox x:Name="CbKaputDegisen" Width="150" Content="Kaput"/>
+                            <CheckBox x:Name="CbOnTamponDegisen" Width="150" Content="Ön Tampon"/>
+                            <CheckBox x:Name="CbSolOnCamurlukDegisen" Width="150" Content="Sol Ön Çamurluk"/>
+                            <CheckBox x:Name="CbSolOnKapiDegisen" Width="150" Content="Sol Ön Kapı"/>
+                            <CheckBox x:Name="CbSolArkaKapiDegisen" Width="150" Content="Sol Arka Kapı"/>
+                            <CheckBox x:Name="CbSolArkaCamurlukDegisen" Width="150" Content="Sol Arka Çamurlık"/>
+                            <CheckBox x:Name="CbBagajDegisen" Width="150" Content="Bagaj"/>
+                            <CheckBox x:Name="CbArkaTamponDegisen" Width="150" Content="Arka Tampon"/>
+                            <CheckBox x:Name="CbSagOnCamurlukDegisen" Width="150" Content="Sağ Ön Çamurluk"/>
+                            <CheckBox x:Name="CbSagOnKapiDegisen" Width="150" Content="Sağ Ön Kapı"/>
+                            <CheckBox x:Name="CbSagArkaKapiDegisen" Width="150" Content="Sağ Arka Kapı"/>
+                            <CheckBox x:Name="CbSagArkaCamurlukDegisen" Width="150" Content="Sağ Arka Çamurlık"/>
+
+                        </ListBox>
+                    </StackPanel>
+
+                    <StackPanel Style="{StaticResource StackPanelStyle}">
+                        <TextBlock Text="Fiyat : " Style="{StaticResource TextBlockStyle}"/>
+                        <TextBox x:Name="TxFiyat"/>
+                    </StackPanel>
+
+                    <StackPanel Style="{StaticResource StackPanelStyle}">
+                        <TextBlock Text="Ne İle Yapıldı : " Style="{StaticResource TextBlockStyle}"/>
+                        <StackPanel Orientation="Horizontal" Width="150">
+                            <RadioButton x:Name="RbKasko" Content="Kasko"/>
+                            <RadioButton x:Name="RbElden" Content="Elden" Margin="20,0,0,0"/>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <StackPanel x:Name="SpKaskoBilgileri" Style="{StaticResource StackPanelStyle}" Orientation="Vertical" Visibility="Collapsed">
+
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                            <TextBlock Text="Sigorta Şirketi : " Style="{StaticResource TextBlockStyle}"/>
+                            <TextBox x:Name="TxSigortaSirketi"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                            <TextBlock Text="Dosya Numarası : " Style="{StaticResource TextBlockStyle}"/>
+                            <TextBox x:Name="TxDosyaNumarasi"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                            <TextBlock Text="Poliçe Numarası : " Style="{StaticResource TextBlockStyle}"/>
+                            <TextBox x:Name="TxPoliceNumarasi"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                            <TextBlock Text="Araç Sahibi : " Style="{StaticResource TextBlockStyle}"/>
+                            <TextBox x:Name="TxAracSahibi"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                            <TextBlock Text="Telefon Numarası : " Style="{StaticResource TextBlockStyle}"/>
+                            <TextBox x:Name="TxTelefonNo"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                            <TextBlock Text="Plaka : " Style="{StaticResource TextBlockStyle}"/>
+                            <TextBox x:Name="TxPlaka"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                            <TextBlock Text="Tc Kimlik Numarası : " Style="{StaticResource TextBlockStyle}"/>
+                            <TextBox x:Name="TxTcNo"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                            <TextBlock Text="Belge Seri Numarası : " Style="{StaticResource TextBlockStyle}"/>
+                            <TextBox x:Name="TxBelgeSeriNo"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                            <TextBlock Text="Kaza Tarihi : " Style="{StaticResource TextBlockStyle}"/>
+                            <DatePicker x:Name="DpKazaTarihi"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                            <TextBlock Text="Kaza Adresi : " Style="{StaticResource TextBlockStyle}"/>
+                            <TextBox x:Name="TxKazaAdresi"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                            <TextBlock Text="Vuran Sürücü : " Style="{StaticResource TextBlockStyle}"/>
+                            <TextBox x:Name="TxVuranSurucu"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                            <TextBlock Text="Vuran Tc Kimlik Numarası : " Style="{StaticResource TextBlockStyle}"/>
+                            <TextBox x:Name="TxVuranTcNo"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                            <TextBlock Text="Vuran Telefon Numarası : " Style="{StaticResource TextBlockStyle}"/>
+                            <TextBox x:Name="TxVuranTelefonNo"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                            <TextBlock Text="Eksper Adı : " Style="{StaticResource TextBlockStyle}"/>
+                            <TextBox x:Name="TxEksperAdi"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                            <TextBlock Text="Eksper Telefon Numarasi : " Style="{StaticResource TextBlockStyle}"/>
+                            <TextBox x:Name="TxEksperTelefonNo"/>
+                        </StackPanel>
+
+                    </StackPanel>
+
+                    <StackPanel Style="{StaticResource StackPanelStyle}" HorizontalAlignment="Left">
+                        <TextBlock Text="Resim : " Style="{StaticResource TextBlockStyle}"/>
+                        <Button x:Name="BtnGözat" Content="Gözat..." Width="50" HorizontalAlignment="Left" BorderBrush="Black" BorderThickness="1.250"/>
+                    </StackPanel>
+
+                    <StackPanel x:Name="SpArabaResim" Orientation="Vertical" Visibility="Collapsed">
+                        <Image x:Name="ImgAraba" Visibility="Collapsed"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical" Margin="0,30,0,0">
+                        <Separator Style="{StaticResource LastSeparator}"/>
+
+                        <StackPanel Style="{StaticResource StackPanelStyle}">
+                            <Button x:Name="BtnTemizle" Width="50" Style="{StaticResource ClearButton}" Margin="0,0,25,0"/>
+                            <Button x:Name="BtnKaydet" Style="{StaticResource SaveButton}"/>
+                        </StackPanel>
+
                     </StackPanel>
 
                 </StackPanel>

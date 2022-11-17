@@ -11,7 +11,7 @@ namespace WpfApp1.Datas
         public static ObservableCollection<Araba> Arabalar = new ObservableCollection<Araba>();
         public static ObservableCollection<Kasko> Kaskolar = new ObservableCollection<Kasko>();
         //public static ObservableCollection<Gelir> Gelir = new ObservableCollection<Gelir>(); 
-        //public static ObservableCollection<Gider> Gider = new ObservableCollection<Gider>();
+        public static ObservableCollection<Gider> Gider = new ObservableCollection<Gider>();
 
         static Veriler()
         {
@@ -62,9 +62,40 @@ namespace WpfApp1.Datas
                 Kasko = Kaskolar[0]
             });
 
-            
+
             //Gelir.Add(new Gelir(){ });
-            //Gider.Add(new Gider(){ });
+            Gider.Add(new Gider()
+            {
+                Urun_Adi = "150 Disk Zımpara",
+                Urun_Adet = 10,
+                Urun_Adet_Fiyat = 7.5m,
+                Gider_Turu = "Nalbur"
+            });
+
+            Gider.Add(new Gider()
+            {
+                Urun_Adi = "Dükkan Kirası",
+                Urun_Adet = 1,
+                Urun_Adet_Fiyat = 10000m,
+                Gider_Turu = "Kira"
+            });
+
+            Gider.Add(new Gider()
+            {
+                Urun_Adi = "Elektrik Faturası",
+                Urun_Adet = 1,
+                Urun_Adet_Fiyat = 4000m,
+                Gider_Turu = "Fatura"
+            });
+
+            Gider.Add(new Gider()
+            {
+                Urun_Adi = "Rahim'in Haftalığı",
+                Urun_Adet = 1,
+                Urun_Adet_Fiyat = 2500m,
+                Gider_Turu = "Eleman Maaşı"
+            });
+
         }
     }
 }

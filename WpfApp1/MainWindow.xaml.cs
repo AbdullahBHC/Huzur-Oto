@@ -24,7 +24,6 @@ namespace WpfApp1
         {
             InitializeComponent();
             GrdArabalar.MouseLeftButtonDown += GrdArabalar_MouseLeftButtonDown;
-            GrdKasko.MouseLeftButtonDown += GrdKasko_MouseLeftButtonDown;
             GrdGelirGider.MouseLeftButtonDown += GrdGelirGider_MouseLeftButtonDown;
         }
 
@@ -36,13 +35,6 @@ namespace WpfApp1
             this.Visibility = Visibility.Hidden;
         }
 
-        private void GrdKasko_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            NavigationWindow window = new NavigationWindow();
-            window.Source = new Uri("Pages/KaskoIslemleri.xaml", UriKind.Relative);
-            window.Show();
-            this.Visibility = Visibility.Hidden;
-        }
 
         private void GrdArabalar_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {

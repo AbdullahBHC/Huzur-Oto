@@ -20,11 +20,13 @@ C:\Users\PC\Desktop\Yazilim\Yaptıgım Uygulamalar - C#\HuzurOto\WpfApp1\obj\Deb
 C:\Users\PC\Desktop\Yazilim\Yaptıgım Uygulamalar - C#\HuzurOto\WpfApp1\obj\Debug\netcoreapp3.1\Pages\Arabalar.g.cs
 C:\Users\PC\Desktop\Yazilim\Yaptıgım Uygulamalar - C#\HuzurOto\WpfApp1\obj\Debug\netcoreapp3.1\Pages\Arabalar.baml
 C:\Users\PC\Desktop\Yazilim\Yaptıgım Uygulamalar - C#\HuzurOto\WpfApp1\obj\Debug\netcoreapp3.1\Pages\GelirGider.g.cs
-C:\Users\PC\Desktop\Yazilim\Yaptıgım Uygulamalar - C#\HuzurOto\WpfApp1\obj\Debug\netcoreapp3.1\Pages\KaskoIslemleri.g.cs
 C:\Users\PC\Desktop\Yazilim\Yaptıgım Uygulamalar - C#\HuzurOto\WpfApp1\obj\Debug\netcoreapp3.1\Pages\GelirGider.baml
-C:\Users\PC\Desktop\Yazilim\Yaptıgım Uygulamalar - C#\HuzurOto\WpfApp1\obj\Debug\netcoreapp3.1\Pages\KaskoIslemleri.baml
 C:\Users\PC\Desktop\Yazilim\Yaptıgım Uygulamalar - C#\HuzurOto\WpfApp1\obj\Debug\netcoreapp3.1\Pages\ArabaEkle.g.cs
 C:\Users\PC\Desktop\Yazilim\Yaptıgım Uygulamalar - C#\HuzurOto\WpfApp1\obj\Debug\netcoreapp3.1\Pages\ArabaEkle.baml
 C:\Users\PC\Desktop\Yazilim\Yaptıgım Uygulamalar - C#\HuzurOto\WpfApp1\obj\Debug\netcoreapp3.1\WpfApp1.csprojAssemblyReference.cache
 C:\Users\PC\Desktop\Yazilim\Yaptıgım Uygulamalar - C#\HuzurOto\WpfApp1\obj\Debug\netcoreapp3.1\Pages\ArabaAyrıntı.g.cs
 C:\Users\PC\Desktop\Yazilim\Yaptıgım Uygulamalar - C#\HuzurOto\WpfApp1\obj\Debug\netcoreapp3.1\Pages\ArabaAyrıntı.baml
+C:\Users\PC\Desktop\Yazilim\Yaptıgım Uygulamalar - C#\HuzurOto\WpfApp1\obj\Debug\netcoreapp3.1\Pages\GelirEkle.g.cs
+C:\Users\PC\Desktop\Yazilim\Yaptıgım Uygulamalar - C#\HuzurOto\WpfApp1\obj\Debug\netcoreapp3.1\Pages\GiderEkle.g.cs
+C:\Users\PC\Desktop\Yazilim\Yaptıgım Uygulamalar - C#\HuzurOto\WpfApp1\obj\Debug\netcoreapp3.1\Pages\GelirEkle.baml
+C:\Users\PC\Desktop\Yazilim\Yaptıgım Uygulamalar - C#\HuzurOto\WpfApp1\obj\Debug\netcoreapp3.1\Pages\GiderEkle.baml

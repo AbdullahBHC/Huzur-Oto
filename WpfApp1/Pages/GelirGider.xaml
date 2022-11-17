@@ -15,36 +15,76 @@
             <ColumnDefinition Width="0.5*"/>
         </Grid.ColumnDefinitions>
 
-        <Button Content="Geri" x:Name="BtnGeri" Width="30" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.25*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
 
-        <ListBox x:Name="LbArabalar" Margin="20" ScrollViewer.HorizontalScrollBarVisibility="Disabled" BorderThickness="2" BorderBrush="Black">
-            <ListBox.ItemTemplate>
-                <DataTemplate >
-                    <Border BorderBrush="Black" BorderThickness="2" Margin="10">
-                        <StackPanel Orientation="Horizontal" Margin="10,10">
-                            <Image x:Name="ImgAraba"/>
-                            <StackPanel Margin="20,5">
-                                <TextBlock Text="{Binding Marka}" Width="150" FontSize="15" FontWeight="SemiBold"/>
-                                <TextBlock Text="{Binding Model}" Width="150" FontSize="15" FontWeight="SemiBold"/>
-                                <TextBlock Text="{Binding Yil}" Width="150" FontSize="15" FontWeight="SemiBold" />
-                                <TextBlock Text="{Binding Toplam_Tutar,StringFormat={}{0} ₺}" Width="150" FontSize="15" FontWeight="SemiBold" Foreground="DarkRed"/>
+            <Border BorderBrush="Black" BorderThickness="2" Margin="10,5,10,0">
+                <StackPanel Orientation="Horizontal">
+                    <Button Content="Geri" x:Name="BtnGeri" Width="40" Height="25" Margin="10,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                    <Button Content="Gelir Ekle" x:Name="BtnGelirEkle" Width="80" Height="25" Margin="10,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                    <Button Content="Gider Ekle" x:Name="BtnGiderEkle" Width="80" Height="25" Margin="10,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                </StackPanel>
+            </Border>
+
+            <Border Grid.Row="1" BorderBrush="Black" BorderThickness="2"  Margin="10,10,10,5">
+                <ListBox x:Name="LbGelirler">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Marka : " FontSize="13" FontWeight="SemiBold"/>
+                                    <TextBlock Text="{Binding Marka}" FontSize="13" FontWeight="Bold"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="5,0">
+                                    <TextBlock Text="Model : " FontSize="13" FontWeight="SemiBold"/>
+                                    <TextBlock Text="{Binding Model}" FontSize="13" FontWeight="Bold"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Fiyat : " FontSize="13" FontWeight="SemiBold"/>
+                                    <TextBlock Text="{Binding Toplam_Tutar,StringFormat={}{0} ₺}" Foreground="#008000" FontSize="13" FontWeight="Bold"/>
+                                </StackPanel>
                             </StackPanel>
-                        </StackPanel>
-                    </Border>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-            <ListBox.ContextMenu>
-                <ContextMenu>
-                    <MenuItem Header="Sil" x:Name="MiSil"/>
-                </ContextMenu>
-            </ListBox.ContextMenu>
-            <ListBox.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <WrapPanel/>
-                </ItemsPanelTemplate>
-            </ListBox.ItemsPanel>
-        </ListBox>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </Border>
 
+            <Border Grid.Row="2" BorderBrush="Black" BorderThickness="2"  Margin="10,5,10,10">
+                <ListBox x:Name="LbGiderler">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Ürün : " FontSize="13" FontWeight="SemiBold"/>
+                                    <TextBlock Text="{Binding Urun_Adi}" FontSize="13" FontWeight="Bold"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="5,0">
+                                    <TextBlock Text="{Binding Urun_Adet,StringFormat={}{0}x}" FontSize="13" FontWeight="Bold"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="5,0">
+                                    <TextBlock Text="~  Adet Fiyatı : " FontSize="13" FontWeight="SemiBold"/>
+                                    <TextBlock Text="{Binding Urun_Adet_Fiyat,StringFormat={}{0} ₺}" FontSize="13" FontWeight="Bold"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="| Toplam Fiyat : " FontSize="13" FontWeight="SemiBold"/>
+                                    <TextBlock x:Name="TxToplamFiyat" Text="{Binding Toplam_Fiyat,StringFormat={}{0} ₺}" Foreground="#008000" FontSize="13" FontWeight="Bold"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="5,0">
+                                    <TextBlock Text="Gider Türü : " FontSize="13" FontWeight="SemiBold"/>
+                                    <TextBlock Text="{Binding Gider_Turu}" FontSize="13" FontWeight="Bold"/>
+                                </StackPanel>
+
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </Border>
+        </Grid>
+        
         <Border Grid.Column="1" BorderBrush="Black" BorderThickness="2"  Margin="20">
             <StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="5,5,5,0">
